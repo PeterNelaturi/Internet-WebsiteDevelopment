@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Form Page</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  
+  <div id="container">
+    <div id="sceneImg1"></div>
+    <div id="sceneImg2"></div>
+    <button id="book-now-btn">Book Now</button>
+  </div>
+
+  <div id="verticalBanner"></div>
+
+  
+  <div id="user-form-container">
+    <form id="user-form">
+     
+      <div id="progress-bar">
+        Step 1 of 4
+      </div>
+
+      
+      <h3>Step 1: Attendance Details</h3>
+
+      <label for="attendance-date">Date of Attendance:</label>
+      <input type="date" id="attendance-date" name="attendance_date" required><br><br>
+
+      <label for="adults">Adults:</label>
+      <input type="number" id="adults" name="adults" min="0" value="0" required><br><br>
+
+      <label for="children">Children:</label>
+      <input type="number" id="children" name="children" min="0" value="0" required><br><br>
+
+      <button type="button" id="next-btn">Next</button>
+    </form>
+  </div>
+
+  
+  <script src="submitform.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+#container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+    width: 75vw;
+    height: 100vh;
+
+
+}
+
+
+#sceneImg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./assets/Scene1.png');
+    width: 100%;
+    height: 100%;
+
+   
+     background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+opacity: 1;
+    
+ animation: showScene1 10s infinite, zoomScene1 10s infinite;
+
+}
+
+
+
+#sceneImg2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./assets/Scene2.jpg');
+    width: 100%;
+    height: 100%;
+
+
+     background-size: cover;
+background-position: 100% 0;
+background-repeat: repeat-x;
+opacity: 0;
+    
+animation: showScene2 10s infinite, scrollScene2 10s linear infinite;
+
+ z-index: 1;
+}
+
+
+#verticalBanner {
+    
+   
+    position: absolute;
+    top: 0;
+    left: 75vw; 
+    background-image: url('./assets/siderbarchar.png');
+    width: 75vw;
+    height: 100%;
+
+    
+     background-size: 100%, 100%;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+#user-form-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: none; 
+}
+
+
+#progress-bar {
+  display: block;          
+  visibility: visible;    
+  color: #000;             
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+  position: relative;      
+  z-index: 1000;
+}
+
+@keyframes showScene1 {
+    0%, 50% { opacity: 1; }
+    55%, 100% { opacity: 0; }
+}
+
+
+@keyframes showScene2 {
+    0%, 50% { opacity: 0; }
+    55%, 100% { opacity: 1; }
+   
+}
+
+@keyframes zoomScene1 {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.30); }  
+    100% { transform: scale(1.2); }
+}
+
+
+@keyframes scrollScene2 {
+    0%   { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+}
+
+body {
+  margin: 0;               
+  background-color: #d3d3d3;  
+  height: 100vh;           
+}
